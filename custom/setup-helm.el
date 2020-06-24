@@ -35,6 +35,10 @@
     (when (executable-find "curl")
       (setq helm-google-suggest-use-curl-p t))
 
+    (when (executable-find "ack-grep")
+      (setq  helm-grep-default-command "ack-grep -Hn --smart-case --no-group --no-color %e %p %f"
+             helm-grep-default-recurse-command "ack-grep -H --smart-case --no-group --no-color %e %p %f"))
+
     (setq helm-google-suggest-use-curl-p t
           helm-scroll-amount 4 ; scroll 4 lines other window using M-<next>/M-<prior>
           ;; helm-quick-update t ; do not display invisible candidates

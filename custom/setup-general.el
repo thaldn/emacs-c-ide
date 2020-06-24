@@ -50,11 +50,15 @@
 (use-package zygospore
   :bind (("C-x 1" . zygospore-toggle-delete-other-windows)
          ("RET" .   newline-and-indent)))
-
-  ; automatically indent when press RET
+;; automatically indent when press RET
 
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
+;; use ibuffer instead of list-buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 (windmove-default-keybindings)
+
+;; fix junk characters in shell-mode
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode)
 
 (provide 'setup-general)

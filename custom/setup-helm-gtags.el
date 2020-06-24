@@ -29,6 +29,10 @@
     (with-eval-after-load 'helm-gtags
       (define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
       (define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
+      ;;(define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
+      ;;(define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+      ;;(define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+      ;;(define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
       (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
       (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)

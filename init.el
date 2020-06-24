@@ -14,6 +14,18 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq shell-file-name "/bin/bash")
+(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
+
+(global-set-key (kbd "C-c z") 'eshell)
+(global-set-key (kbd "<f10>") 'rename-buffer)
+
+(when (fboundp 'winner-mode)
+  (winner-mode)
+  (windmove-default-keybindings))
+
 (add-to-list 'load-path "~/.emacs.d/custom")
 
 (require 'setup-general)
@@ -22,7 +34,8 @@
   (require 'setup-helm)
   (require 'setup-helm-gtags))
 ;; (require 'setup-ggtags)
-(require 'setup-cedet)
+;;(require 'setup-cedet)
+(require 'setup-c)
 (require 'setup-editing)
 
 
