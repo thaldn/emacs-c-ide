@@ -1,8 +1,9 @@
 (require 'package)
-(setq package-archives 
+(setq package-archives
          '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-         '("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-
+         ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+;;if use local mirrors uncomment it
+;;(setq package-archives '(("myelpa" . "~/myelpa")))
 (package-initialize)
 
 (when (not package-archive-contents)
