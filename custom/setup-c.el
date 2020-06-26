@@ -5,6 +5,7 @@
 
 ;; hs-minor-mode for folding source code
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
+(add-hook 'c-mode-common-hook 'function-args-mode)
 
 ;; Available C style:
 ;; “gnu”: The default style for GNU projects

@@ -70,6 +70,7 @@
           ;; helm-apropos-fuzzy-match t
           helm-buffer-skip-remote-checking t
           helm-locate-fuzzy-match t
+          helm-autoresize-mode t
           helm-display-header-line nil)
 
     (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
@@ -139,8 +140,9 @@
 
     (use-package helm-projectile
       :init
+      (projectile-global-mode)
       (helm-projectile-on)
-      (setq projectile-completion-system 'helm)
-      (setq projectile-indexing-method 'alien))))
+      (setq projectile-indexing-method 'alien)
+      (setq projectile-completion-system 'helm))))
 
 (provide 'setup-helm)

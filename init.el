@@ -1,7 +1,9 @@
 (require 'package)
 (setq package-archives
-         '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-         ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+;;         '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;         ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+         '(("melpa" . "https://melpa.org/packages/")
+         ("gnu" . "https://elpa.gnu.org/packages/")))
 ;;if use local mirrors uncomment it
 ;;(setq package-archives '(("myelpa" . "~/myelpa")))
 (package-initialize)
@@ -53,7 +55,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (elpa-mirror company-c-headers smex zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (projectile sr-speedbar function-args helm-smex magit evil-nerd-commenter evil-leader elpa-mirror company-c-headers smex zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
