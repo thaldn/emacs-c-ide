@@ -22,7 +22,7 @@
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
 
-(global-set-key (kbd "C-c z") 'eshell)
+(global-set-key (kbd "C-c z") 'multi-term)
 (global-set-key (kbd "<f10>") 'rename-buffer)
 
 (when (fboundp 'winner-mode)
@@ -55,7 +55,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile sr-speedbar function-args helm-smex magit evil-nerd-commenter evil-leader elpa-mirror company-c-headers smex zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (multi-term lsp-mode helm-ag projectile sr-speedbar function-args helm-smex magit evil-nerd-commenter evil-leader elpa-mirror company-c-headers smex zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
