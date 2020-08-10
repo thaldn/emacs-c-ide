@@ -43,7 +43,7 @@
 ;; Package: projejctile
 (use-package projectile
   :init
-  (projectile-global-mode)
+  (projectile-mode)
   (setq projectile-enable-caching t))
 
 ;; Package zygospore

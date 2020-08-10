@@ -70,8 +70,8 @@
           ;; helm-apropos-fuzzy-match t
           helm-buffer-skip-remote-checking t
           helm-locate-fuzzy-match t
-          helm-autoresize-mode t
-          helm-display-header-line nil)
+          helm-display-header-line nil
+          helm-autoresize-mode t)
 
     (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
 
