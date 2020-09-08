@@ -25,4 +25,11 @@
   (define-key c-mode-base-map  [(tab)] 'company-complete)
   (define-key c++-mode-map  [(tab)] 'company-complete))
 
+(use-package lsp-mode
+  :config
+  (add-hook 'c++-mode-hook #'lsp)
+  ;;(add-hook 'python-mode-hook #'lsp)
+  ;;(add-hook 'rust-mode-hook #'lsp)
+  (setq lsp-clients-clangd-args '("-j=4" "-background-index" "-log=error")))
+
 (provide 'setup-c)
